@@ -8,31 +8,6 @@
 
   align-items: center;
 
-  padding: 40px;
-
-}
-
-.loader {
-
-  width: 60px;
-  height: 60px;
-
-  border: 6px solid #d3d3d3;
-
-  border-top: 6px solid black;
-
-  border-radius: 50%;
-
-  animation: spin 1s linear infinite;
-
-}
-
-@keyframes spin {
-
-  to {
-
-    transform: rotate(360deg);
-
-  }
+  padding: 100px 20px;
 
 }

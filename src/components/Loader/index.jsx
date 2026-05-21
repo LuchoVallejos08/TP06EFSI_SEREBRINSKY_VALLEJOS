@@ -1,4 +1,6 @@
 import { ClipLoader } from "react-spinners";
+import "./Loader.css";
+
 
 const Loader = () => {
 

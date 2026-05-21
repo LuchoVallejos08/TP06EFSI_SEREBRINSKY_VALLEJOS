@@ -4,6 +4,8 @@ import SearchBar from "./components/SearchBar";
 import MovieList from "./components/MovieList";
 import MovieDetail from "./components/MovieDetail";
 
+import "./App.css";
+
 function App() {
 
   const [entry, setEntry] = useState("shrek");
@@ -15,7 +17,7 @@ function App() {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div>
+    <div className="app">
 
       <SearchBar setEntry={setEntry} />
 

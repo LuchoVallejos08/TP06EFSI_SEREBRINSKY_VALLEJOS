@@ -1,4 +1,5 @@
 import noPoster from "../../assets/noPoster.png";
+import "./MovieCard.css";
 
 const MovieCard = ({
   movie,
@@ -14,37 +15,45 @@ const MovieCard = ({
 
   };
 
-  return (
+ return (
 
-    <div style={styles.card}>
+  <div className="movie">
 
-         <img
-  src={movie.Poster}
-  alt={movie.Title}
-  style={styles.poster}
-  onError={(e) => {
-    e.target.src = noPoster;
-  }}
-/>
+    <div className="movie__poster-container">
 
-      <p>
-        <span>Título:</span> {movie.Title}
-      </p>
+      <img
+        src={movie.Poster}
+        alt={movie.Title}
+        className="movie__poster"
+        onError={(e) => {
+          e.target.src = noPoster;
+        }}
+      />
 
-      <p>
-        <span>Año:</span> {movie.Year}
+    </div>
+
+    <div className="movie__info">
+
+      <h2 className="movie__title">
+        {movie.Title}
+      </h2>
+
+      <p className="movie__year">
+        {movie.Year}
       </p>
 
       <button
-        style={styles.button}
+        className="movie__button"
         onClick={handleDetail}
       >
-        Ver detalle
+        View details
       </button>
 
     </div>
 
-  );
+  </div>
+
+);
 
 };
 

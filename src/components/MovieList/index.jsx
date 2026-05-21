@@ -4,6 +4,8 @@ import axios from "axios";
 import MovieCard from "../MovieCard";
 import Loader from "../Loader";
 
+import "./MovieList.css";
+
 const MovieList = ({
   entry,
   listMovies,
@@ -68,8 +70,8 @@ const MovieList = ({
 
     return (
 
-      <h1 style={styles.error}>
-        ❌ {error}
+      <h1 className="error">
+       No hay resultados para tu búsqueda
       </h1>
 
     );
@@ -77,8 +79,8 @@ const MovieList = ({
   }
 
   return (
-
-    <div style={styles.container}>
+  
+    <div className="movies">
 
       {listMovies.map((movie) => (
 
@@ -94,34 +96,6 @@ const MovieList = ({
     </div>
 
   );
-
-};
-
-const styles = {
-
-  container: {
-
-    display: "flex",
-
-    flexWrap: "wrap",
-
-    justifyContent: "center",
-
-    gap: "20px",
-
-    padding: "20px"
-
-  },
-
-  error: {
-
-    textAlign: "center",
-
-    marginTop: "50px",
-
-    color: "red"
-
-  }
 
 };
 
